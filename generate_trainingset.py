@@ -56,8 +56,14 @@ def generate_pair():
     board = generate_random(board)
     colour = random.choice([None,0,0,1,1])
     type = board_choice()
-    if type:
+    if type and colour:
         board = type(board, colour)
+    set = {}
+    set['board'] = board
+    set['colour'] = colour
+    return set
+
+
     
     
 
